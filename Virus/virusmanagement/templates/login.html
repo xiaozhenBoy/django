@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load bootstrap_toolkit %}
+{% load url from future %}
+
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title> 异常IP检测与管理</title>
+	<meta name="author" content="ITNLP">
+	{% bootstrap_stylesheet_tag %}
+	{% bootstrap_stylesheet_tag "responsive" %}
+	<!--[if lt IE 9]>
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <style type="text/css">
+        body{
+            padding-top:40px;
+            background-image: url(/static/image/3.jpg);
+            background-repeat: repeat;
+        }
+    </style>
+	{% bootstrap_javascript_tag %}
+	{% block extra_head %} {% endblock %}
+</head>
+
+<body>
+	<div class="container">
+      <div class="row">
+        <div class="span7">
+            <div class="well">
+                <h3> 异常IP识别和管理</h3>
+                <p>入侵检测系统（intrusion detection system，简称“IDS”）是一种对网络传输进行即时监视，在发现可疑传输时发出警报或者采取主动反应措施的网络安全设备。它与其他网络安全设备的不同之处便在于，IDS是一种积极主动的安全防护技术。IDS最早出现在1980年4月。 1980年代中期，IDS逐渐发展成为入侵检测专家系统（IDES）。 1990年，IDS分化为基于网络的IDS和基于主机的IDS。后又出现分布式IDS。目前，IDS发展迅速，已有人宣称IDS可以完全取代防火墙。本系统在其基础之上为了更好的监控异常IP，通过各种分析手段识别异常IP，然后根据异常类型使用不同的管理策略进行监管。</p>
+            </div>
+        </div>
+		<div class="span5">
+			{% if password_is_wrong %}
+			<div class="alert alert-error">
+				<button type="button" class="close" data-dismiss="alert"></button>
+				<h4>用户名或者密码错误</h4>
+			</div>
+			{% endif %}
+			<div class="well">
+				<form class="form-horizontal" action="" method="post">
+					{% csrf_token %}
+					{{ form|as_bootstrap:"herizontal" }}
+					<p class="form-actions">
+					<input type="submit" value="登陆" class="btn btn-primary">
+					<a href="#"><input type="button" value="忘记密码" class="btn btn-danger"></a>
+					<!-- <a href="#"><input type="button" value="注册" class="btn btn-success"></a> -->
+					</p>
+				</form>
+			</div>
+		</div>
+       </div>
+	</div>
+</body>
+
+</html>

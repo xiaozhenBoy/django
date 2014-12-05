@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load bootstrap_toolkit %}
+{% load url from future %}
+
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>异常IP检测与管理</title>
+	<meta name="author" content="ITNLP">
+	{% bootstrap_stylesheet_tag %}
+	{% bootstrap_stylesheet_tag "responsive" %}
+	<!--[if lt IE 9]>
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <link href="/static/css/base.css" type="text/css" rel="stylesheet">
+	{% bootstrap_javascript_tag %}
+	{% block extra_head %} {% endblock %}
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--left-->
+	    <div class="span3">
+			<div class="left-nav bs-docs-sidebar">
+				<ul class="nav nav-list bs-docs-sidenav">
+					<li class="nav-header">IP Manager</li>
+					<li><a href="/virusmanagement">首页</a></li>
+					<li><a href="/virusmanagement/monitor">监控日志</a></li>
+					<li><a href="/virusmanagement/exception">异常IP</a></li>
+					<li><a href="#">处理记录</a></li>
+					<li><a href="#">策略管理</a></li>
+					<li><a href="/virusmanagement/logout">退出</a></li>
+				</ul>
+			</div>
+        </div>
+		<div class="span9">
+			<div class="main-content">
+				{% block maincontent %}{% endblock %}
+			</div>
+			<footer class="row">
+                <div class="span4" style="text-align:right">
+                   <!-- <p>ITNLP & Changyu</p>-->
+                </div>
+                <div class="span4" style="text-align:right">
+                   <p>
+                      &copy;<a href="http://insun.hit.edu.cn"> Sun Chengjie and Xu Zhen</a>&nbsp;&nbsp;2014
+                   </p>
+                </div>
+			</footer>
+		</div>
+	</div>
+</body>
+
+</html>

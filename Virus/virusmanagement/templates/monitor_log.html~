@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% load bootstrap_toolkit %}
+
+{% block maincontent %}
+
+<div class="row">
+    <!--<h3>监控日志</h3>-->
+    <table class="table table-hover">
+        <thead>
+           <tr>
+               <th>Device Name</th>
+               <th>log Type</th>
+               <th>log Content</th>
+               <th>Time</th>
+               <th>Operation</th>
+           </tr>
+        </thead>
+        <tbody>
+           {% for line in lines %}
+           <tr>
+               <td>Device Name</td>
+               <td>{{line}}</td>
+               <td>log Content</td>
+               <td>Time</td>
+               <td>Operation</td>
+           </tr>
+           {% endfor %}
+        </tbody>
+    </table>
+    <!--{{lines|pagination}}-->
+    <!--{% bootstrap_pagination lines url="/virusmanagement/monitor?page=1&flop=flip" size="mini" align="right" %}-->
+    {% bootstrap_pagination lines url="/virusmanagement/monitor?page=1" align="center" size="large" %}
+</div>
+{% endblock %}

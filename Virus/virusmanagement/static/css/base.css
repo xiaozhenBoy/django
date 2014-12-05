@@ -1,0 +1,23 @@
+html{
+    height: 100%;
+    font-weight: 400;
+}
+
+body, div, ul, li{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+     padding-top: 40px;
+     font: 13px, "Helvetica Neue", Arial, sans-serif;
+}
+
+.nav.nav-list li{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.main-content{
+	 min-height: 500px;
+}

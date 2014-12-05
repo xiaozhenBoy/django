@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% load bootstrap_toolkit %}
+
+{% block maincontent %}
+
+<div class="row">
+    <table class="table table-hover">
+        <thead>
+           <tr>
+			   <td></td>
+               <td>IP Adress</td>
+               <td>Virus Type</td>
+               <td>Src/Dest</td>
+               <td>Description</td>
+		   </tr>
+		</thead>
+		<tbody>
+           {% for ip in ips %}
+           <tr>
+			   <td><input type="checkbox" name='child'></td>
+               <td>{{ip}}</td>
+               <td>Virus Type</td>
+               <td>Src/Dest</td>
+               <td>Description</td>
+		   </tr>
+           {% endfor %}
+        </tbody>
+    </table>
+    <div class="span6">&nbsp;</div>
+    <div class="span3" style="align:center;">
+        <form class="form-inline" action="" method="post">
+            <input type="submit" value="删除" class="btn btn-warning">&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="submit" value="待查" class="btn btn-info">&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="submit" value="拒绝" class="btn btn-inverse">&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="submit" value="忽略" class="btn btn-success">      
+        </form>
+    </div>
+    {% bootstrap_pagination ips url="/virusmanagement/exception?page=1" align="center" size="large" %}
+</div>
+{% endblock %}
