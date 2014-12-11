@@ -28,7 +28,7 @@
 					<li><a href="/virusmanagement">首页</a></li>
 					<li><a href="/virusmanagement/monitor">监控日志</a></li>
 					<li><a href="/virusmanagement/exception">异常IP</a></li>
-					<li><a href="#">处理记录</a></li>
+					<li><a href="/virusmanagement/handled">处理记录</a></li>
 					<li><a href="#">策略管理</a></li>
 					<li><a href="/virusmanagement/logout">退出</a></li>
 				</ul>

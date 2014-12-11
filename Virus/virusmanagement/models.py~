@@ -68,7 +68,7 @@ class Handlelog(models.Model):
         ('IGN', 'ignored'),
         ('OTH', 'other'),
     )
-    id = models.AutoField(primary_key=True)
+    indx = models.AutoField(primary_key=True)
     device_name = models.CharField(max_length=200)
     device_ip = models.CharField(max_length=200)
     is_victim = models.CharField(max_length=10, choices=DEVICE_TYPE, default='VICTIM')

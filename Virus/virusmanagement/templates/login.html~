@@ -28,7 +28,7 @@
 	<div class="container">
       <div class="row">
         <div class="span7">
-            <div class="well well">
+            <div class="well">
                 <h3> 异常IP识别和管理</h3>
                 <p>入侵检测系统（intrusion detection system，简称“IDS”）是一种对网络传输进行即时监视，在发现可疑传输时发出警报或者采取主动反应措施的网络安全设备。它与其他网络安全设备的不同之处便在于，IDS是一种积极主动的安全防护技术。IDS最早出现在1980年4月。 1980年代中期，IDS逐渐发展成为入侵检测专家系统（IDES）。 1990年，IDS分化为基于网络的IDS和基于主机的IDS。后又出现分布式IDS。目前，IDS发展迅速，已有人宣称IDS可以完全取代防火墙。本系统在其基础之上为了更好的监控异常IP，通过各种分析手段识别异常IP，然后根据异常类型使用不同的管理策略进行监管。</p>
             </div>

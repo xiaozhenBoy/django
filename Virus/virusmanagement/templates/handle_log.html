@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% load bootstrap_toolkit %}
+
+{% block maincontent %}
+<div class="row">
+    <form class="form-horizontal" action="", method="post">
+        {% csrf_token %}
+        <table class="table table-hover">
+            <thead>
+                <tr>
+			        <td></td>
+                    <td> DeviceName </td>
+                    <td> DeviceIP </td>
+                    <td> IsVictim </td>
+                    <td> Operation </td>
+                    <td> OpTime </td>
+		        </tr>
+		    </thead>
+            <tbody>
+                {% for hlog in hlogs %}
+                <tr>
+			        <td><input type="checkbox" value="{{ hlog.id }}" name='box_child'>&nbsp;&nbsp;{{ hlog.id }}</td>
+                    <td> {{ hlog.device_name }} </td>
+                    <td> {{ hlog.device_ip }} </td>
+                    <td> {{ hlog.is_victim }} </td>
+                    <td> {{ hlog.operation }} </td>
+                    <td> {{ hlog.op_time }} </td>
+		        </tr>
+                {% endfor %}  
+            </tbody>
+        </table>
+        <p class="form-actions">
+             <input type="submit" name="ip_recovery" value="恢复" class="btn btn-warning">
+        </p>
+    </form>
+    {% bootstrap_pagination hlogs url="/virusmanagement/handled?page=1" align="center" size="large" %}
+{% endblock %}

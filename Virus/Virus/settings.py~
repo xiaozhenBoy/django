@@ -61,7 +61,7 @@ WSGI_APPLICATION = 'Virus.wsgi.application'
 DATABASES = {
     'default': {
 		'ENGINE': 'django.db.backends.mysql',		
-		'NAME': 'syslistener',
+		'NAME': 'itnlp',
 		'USER': 'root',
 		'PASSWORD':'12345',
 		'HOST':'localhost',
