@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load bootstrap3 %}
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Custom styles for this template -->
+        {% bootstrap_css %}
+        <link href="/static/css/base.css" rel="stylesheet">
+        {% block extra_head %} {% endblock %}
+    </head>
+    <!-- body -->
+    <body>
+        <!-- top navigation -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">网络安全设备联动系统</a>
+		    </div>
+		    <div id="navbar" class="navbar-collapse collapse">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#">Dashboard</a></li>
+		        <li><a href="#">设置</a></li>
+		        {% if login %}
+                       <li><a href="#">退出</a></li>
+                {% else %}
+                       <li><a href="#">登陆</a></li>
+                {% endif %}
+		        <li><a href="#">帮助</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+
+        <!-- content -->
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left navigation -->
+                <div class="col-sm-3 col-md-2 sidebar">
+                      <ul class="nav nav-sidebar">
+                        {% if url == index %}
+						<li class="active">
+                        {% else %}
+						<li>
+                        {% endif %}
+                             <a href="/mana/index/">系统简介</a></li>
+						<li><a href="#">系统管理</a></li>
+						<li><a href="/mana/probemana/">探针设备管理</a></li>
+                        <li><a href="/mana/messdevmana/">消息处理设备管理</a></li>
+						<li><a href="/mana/ipmana/">异常IP管理</a>
+                           <ul class="nav nav-sidebar-children">
+                               <li><a href="#">黑名单</a></li>
+                               <li><a href="#">白名单</a></li>
+                               <li><a href="#">已处理IP</a></li>
+                           </ul>
+                        </li>
+						<li><a href="/mana/policy/">策略管理</a></li>
+					  </ul>
+                </div>
+                
+                <!-- main content -->
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                     {% block main-content %}{% endblock %}
+                </div>
+            </div> 
+        </div>
+
+        <!-- Bootstrap core JavaScript ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/static/js/jquery.js"></script>
+        <script src="/static/js/bootstrap.js"></script>
+    </body>
+</html>

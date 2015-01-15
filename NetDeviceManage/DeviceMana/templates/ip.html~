@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% load dict_extras %}
+{% block main-content %}
+   <!-- class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" -->
+   <div claa="container-fluid">
+     <div class="row well well-sm">
+      <div class="col-sm-6 col-md-6">
+           <h4>异常IP日志</h4>
+      </div>
+      <div class="col-sm-2 col-md-2">
+         <h4>浏览条件：</h4>
+      </div>
+      <div class="col-sm-4 col-md-4">
+           <form  class="form-inline" role="form" method="post">
+		   {% csrf_token %}
+		   {% bootstrap_form form %}
+		   {% buttons submit='Go'%} {% endbuttons %}
+	       </form>
+      </div>
+     </div>
+   </div>
+   <div class="row">
+    <form class="form-horizontal" action="", method="post">
+      {% csrf_token %}
+      <div class="table-responsive">
+          <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" value="{{ ip|getDictValue:'indx' }}" name='box_child'></td>
+                  <td>1,001</td>
+                  <td>Lorem</td>
+                  <td>ipsum</td>
+                  <td>dolor</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" value="" name='box_child'></td>
+                  <td>1,002</td>
+                  <td>amet</td>
+                  <td>consectetur</td>
+                  <td>adipiscing</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" value="" name='box_child'></td>
+                  <td>1,003</td>
+                  <td>Integer</td>
+                  <td>nec</td>
+                  <td>odio</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" value="" name='box_child'></td>
+                  <td>1,003</td>
+                  <td>libero</td>
+                  <td>Sed</td>
+                  <td>cursus</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" value="" name='box_child'></td>
+                  <td>1,004</td>
+                  <td>dapibus</td>
+                  <td>diam</td>
+                  <td>Sed</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" value="" name='box_child'></td>
+                  <td>1,005</td>
+                  <td>Nulla</td>
+                  <td>quis</td>
+                  <td>sem</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" value="" name='box_child'></td>
+                  <td>1,008</td>
+                  <td>Fusce</td>
+                  <td>nec</td>
+                  <td>tellus</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" value="" name='box_child'></td>
+                  <td>1,009</td>
+                  <td>augue</td>
+                  <td>semper</td>
+                  <td>porta</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" value="" name='box_child'></td>
+                  <td>1,010</td>
+                  <td>massa</td>
+                  <td>Vestibulum</td>
+                  <td>lacinia</td>
+                </tr>
+              </tbody>
+            </table>
+           </div>
+           <div class="">
+				<p class="form-actions">
+				     <input type="submit" name="ip_delete" value="流量控制" class="btn btn-warning">
+				     <input type="submit" name="ip_wait" value="会话控制" class="btn btn-info">
+				     <input type="submit" name="ip_reject" value="加入白名单" class="btn btn-inverse">
+				     <input type="submit" name="ip_ignore" value="" class="btn btn-success">
+				</p>
+           </div>
+          </form>
+         </div>
+       </div>
+   </div>
+{% endblock %}

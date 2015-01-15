@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block main-content %}
+   <!-- class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" -->
+   <div class="container-fluid">
+      <div class="row">
+      {% if delsuccess %}
+         <p>成功删除设备！</p>
+      {% else %}
+         您确定删除设备{% devname %}, 删除后将无法获取该设备提供的信息或者向其发送控制命令！
+         <form method="POST">
+             确认删除信息。
+         </form>
+      {% endif %}
+      </div>
+   </div>
+{% endblock %}
