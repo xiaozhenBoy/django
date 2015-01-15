@@ -1,0 +1,21 @@
+{% extends 'base_labweb2.html' %}
+{% load bootstrap3 %}
+
+{% block maincontent %}
+{% autoescape off %}
+<!-- left navigation -->
+<div class="col-sm-3 col-md-2 sidebar">
+  <ul class="nav nav-sidebar">
+	<li class="active"><a href="#">系统简介</a></li>
+  </ul>
+  <ul class="nav nav-sidebar">
+	<li><a href="#">系统管理</a></li>
+	<li><a href="#">探针设备管理</a></li>
+    <li><a href="#">消息处理设备管理</a></li>
+  </ul>
+</div>
+<!-- main content -->
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+</div>
+{% endautoescape %}
+{% endblock %}

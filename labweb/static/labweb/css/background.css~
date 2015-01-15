@@ -1,0 +1,163 @@
+﻿/*********************************************
+*** Designed by Juergen Koller			   ***
+*** Designers Home: http://www.LernVid.com ***
+**********************************************/
+
+/****************** background image path setting ******************/
+body {
+	background-image:url('/static/labweb/pic/background.png');
+}
+#header {
+	background-image:url('/static/labweb/pic/header.png');
+}
+#subhead {
+	background-image:url('/static/labweb/pic/subhead.png');
+}
+#search {
+	background-image:url('/static/labweb/pic/search.png');
+	background-repeat:no-repeat;
+	background-position: left 2px;
+}
+#maincontent {
+	background-image:url('/static/labweb/pic/background.png');
+}
+#footer {
+	background-image:url('/static/labweb/pic/footer.png');
+	background-repeat:repeat-x;
+}
+#leftcol h3.moduleh3, #rightcol h3.moduleh3 {
+	background-image:url('/static/labweb/pic/h3-module.png');
+	background-repeat:repeat-x;
+	border-bottom:0;
+}
+
+.shadow-left {
+	background-image:url('/static/labweb/pic/shadow-l.png');
+	background-repeat:no-repeat;
+	background-position: left;
+}
+.shadow-right {
+	background-image:url('/static/labweb/pic/shadow-r.png');
+	background-repeat:no-repeat;
+	background-position: right;
+}
+/* ul li background-image*/
+ul.arrow li, ul.arrow li li {
+	background-image : url(../pic/icons/arrow.gif);
+}
+ul.folder li, ul.folder li li {
+	background-image : url(../pic/icons/folder.gif);
+}
+ul.ok li, ul.ok li li {
+	background-image : url(../pic/icons/ok.gif);
+}
+ul.star li, ul.star li li {
+	background-image : url(../pic/icons/star.gif);
+}
+ul.cross li, ul.cross li li {
+	background-image : url(../pic/icons/cross.png);
+}
+
+h1.section, h2.section, h3.section, h4.section, h5.section, h6.section {
+	background-image : url(../pic/icons/section.png);
+}
+
+p.tip {
+	background-image : url(../pic/icons/tip.png);
+}
+p.alert {
+	background-image : url(../pic/icons/alerts.png);
+}
+p.info {
+	background-image : url(../pic/icons/info.png);
+}
+p.right {
+	background-image : url(../pic/icons/right.png);
+}
+p.alarm {
+	background-image : url(../pic/icons/alert.png);
+}
+p.tell {
+	background-image : url(../pic/icons/tell.png);
+}
+p.content {
+	background-image : url(../pic/icons/content.png);
+}
+p.note {
+	background-image : url(../pic/icons/note.png);
+}
+p.question {
+	background-image : url(../pic/icons/question.png);
+}
+
+p.hot {
+	background-image : url(../pic/icons/hot.gif);
+}
+p.new {
+	background-image : url(../pic/icons/new.gif);
+}
+p.top {
+	background-image : url(../pic/icons/top.gif);
+}
+/* special Links */
+
+a.extern {
+	background-image : url(../pic/icons/extern.gif);
+	background-repeat : no-repeat;
+	padding-left: 18px;
+}
+a.www {
+	background-image : url(../pic/icons/www.gif);
+	background-repeat : no-repeat;
+	padding-left: 18px;
+}
+a.download {
+	background-image : url(../pic/icons/download.gif);
+	background-repeat : no-repeat;
+	padding-left: 18px;
+}
+a.run {
+	background-image : url(../pic/icons/run.gif);
+	background-repeat : no-repeat;
+	padding-left: 18px;
+}
+a.image {
+	background-image : url(../pic/icons/image.gif);
+	background-repeat : no-repeat;
+	padding-left: 18px;
+}
+a.user {
+	background-image : url(../pic/icons/user.gif);
+	background-repeat : no-repeat;
+	padding-left: 18px;
+}
+a.pdf {
+	background-image : url(../pic/icons/pdf.gif);
+	background-repeat : no-repeat;
+	padding-left: 18px;
+}
+a.zip {
+	background-image : url(../pic/icons/zip.gif);
+	background-repeat : no-repeat;
+	padding-left: 18px;
+}
+a.text {
+	background-image : url(../pic/icons/text.gif);
+	background-repeat : no-repeat;
+	padding-left: 18px;
+}
+a.sound {
+	background-image : url(../pic/icons/sound.gif);
+	background-repeat : no-repeat;
+	padding-left: 18px;
+}
+a.video {
+	background-image : url(../pic/icons/video.gif);
+	background-repeat : no-repeat;
+	padding-left: 18px;
+}
+a.info {
+	background-image : url(../pic/icons/info.gif);
+	background-repeat : no-repeat;
+	padding-left: 18px;
+}
